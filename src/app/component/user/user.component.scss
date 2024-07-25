@@ -1,0 +1,35 @@
+.center{
+    top:40%;
+    left:50%;
+    position:fixed;
+    padding:80px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    background-color: rgb(151, 149, 192);
+    height:100vh;
+}
+
+input{
+    width:90%;
+    align-items: center;
+    margin-left:20px;
+}
+
+label{
+    padding:10px;
+    width:70%;
+    text-align:left;
+    left:50%;
+    transform: translate(-30%);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+small{
+    color:darkred;
+    font-size:15px;
+}
+
+.error{
+    color:red;
+}

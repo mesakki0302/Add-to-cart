@@ -1,0 +1,28 @@
+<img src="assets/FF.jpg" alt="">
+<div class="center">
+    <form [formGroup]="register">
+    <br>
+    <br>    
+    <h3>LOGIN</h3><br>
+    <label>User Name</label><br>
+    <br>
+    <input type="text" class="Form-control" placeholder="Enter username" formControlName="Uname" [class.Error]="register.controls['Uname'].dirty && register.hasError('required','Uname')"><br>
+    <small *ngIf="register.controls['Uname'].dirty && register.hasError('required','Uname')" class="error">*UserName is required</small>
+    <br>
+    <label>Password</label><br>
+    <br>
+    <input type="password" class="Form-control" placeholder="Enter password" formControlName="Pass" [class.Error]="register.controls['Pass'].dirty && register.hasError('required','Pass')"><br>
+    <small *ngIf="register.controls['Pass'].dirty && register.hasError('required','Pass')" class="error">*Password is required</small>
+    <br>
+    <br>
+    <button class="btn btn-success" style="width:70%" (click)="onsubmit()" routerLink="../products">Submit</button>
+    <br>
+    <br>
+    <h3>Are You New User:</h3>
+    <button mat-raised-button color="primary" style="width:60%" routerLink="../patientreg" (click)="open()"> Create Accounts</button> 
+    </form>
+</div>
+
+
+
+

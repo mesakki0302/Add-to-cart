@@ -1,0 +1,28 @@
+<div class="center">
+<form [formGroup]="User">
+    <h1 style="text-align: center; font-size: xx-large;font-family: Arial, Helvetica, sans-serif;">Registration Form</h1>
+    <br>
+    <label>FirstName</label>
+    <input type="text" class="Form-control" placeholder="Enter FirstName" formControlName="Fname" [class.error]="User.controls['Fname'].dirty && User.hasError('required','Fname')" >&nbsp;
+    <small *ngIf="User.controls['Fname'].dirty && User.hasError('required','Fname')" class="text-danger">*First Name is required</small>
+    <br>
+    <label>LastName</label>
+    <input type="text" class="Form-control" placeholder="Enter LastName" formControlName="Lname">&nbsp;
+    <small *ngIf="User.controls['Lname'].dirty && User.hasError('required','Lname')" class="text-danger">*Last Name is required</small>
+    <br>
+    <label>Email</label>
+    <input type="text" class="Form-control" placeholder="Enter Email" formControlName="Email">&nbsp;
+    <small *ngIf="User.controls['Email'].dirty && User.hasError('required','Email')" class="text-danger">*Email is required</small>
+    <br>
+    <label>Password</label>
+    <input type="password" class="Form-control" placeholder="Enter Password" formControlName="Pass">&nbsp;
+    <small *ngIf="User.controls['Pass'].dirty && User.hasError('required','Pass')" class="text-danger">*Password is required</small>
+    <br>
+    <label>Confirm Password</label>
+    <input type="password" class="Form-control" placeholder="Enter Password" formControlName="CPass">&nbsp;
+    <div *ngIf= "passwordMismatch" class="error">Password do not Match</div>
+    <br>
+    <br>
+    <button class="btn btn-primary" style="width:60%" (click)="onsub()">Register</button>
+</form>
+</div>

@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+              <img src="http://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="" routerLink="products">
+              <h3>All Products</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="http://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="" routerLink="../like/electronic">
+                <h3>Electronics</h3>
+              </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="http://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="" routerLink="../like/fashion">
+                <h3>Fashion</h3>
+              </a>
+        </div>
+        <div class="item" id="Map">
+            <a>
+                <img style="text-align: center;align-items: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXXRG-ZKbqVXoWpCaJqbb6pUp_3wDiV4yTjbuON3GeP8Lg2Xsh5pLC2zwttzy6-NjjaE&usqp=CAU" alt="" routerLink="../like/jewel">
+                <h3 id="Map1">Jewellery</h3>
+              </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList | filter:searchkey:'title'">
+        <div class="card col-md-3">
+            <img src="{{item.image}}" alt="">
+            <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:100ch">{{item.title}}</h3>
+            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:100ch">{{item.description}}</p>
+            <strong>Price:</strong>${{item.price}}
+            <button class="btn btn-primary" (click)="AddtoCart(item)">Add to Cart</button>
+        </div>
+        </ng-container>
+</div>

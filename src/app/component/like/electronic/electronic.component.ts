@@ -14,7 +14,7 @@ export class ElectronicComponent implements OnInit {
 
   ngOnInit(){
 
-    this.electronic=this.Api.getelectronics();
+    this.electronic=this.Api.getElectronics();
     this.electronic.forEach((a:any)=>{
       Object.assign(a,{quantity:1,total:a.price})
      })
